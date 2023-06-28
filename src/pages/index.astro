@@ -1,5 +1,6 @@
 ---
 import Main from '../layouts/Main.astro';
+import Search from '../components/Search.astro';
 
 import { Picture } from '@astrojs/image/components';
 import logo from '../images/todds-bistro-logo.png';
@@ -12,6 +13,7 @@ import logo from '../images/todds-bistro-logo.png';
   <div class="basis-12/12 lg:basis-8/12">
     <div class="flex flex-col">
       <Picture src={logo} widths={[1000]} aspectRatio="5:3" />
+      <Search />
     </div>
   </div>
   <div class="lg:basis-2/12">

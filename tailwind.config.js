@@ -12,6 +12,9 @@ module.exports = {
     extend: {
       colors: {
         'med-champagne': '#fbeaab',
+        'outer-space': '#454545',
+        'ghost-white': '#f8f9fa',
+        'bright-gray': '#e9ecef',
       },
       fontFamily: {
         'montserrat': ['Montserrat','sans-serif'],
