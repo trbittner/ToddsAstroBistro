@@ -1,18 +1,21 @@
 ---
+import Main from './Main.astro'
 const {frontmatter} = Astro.props;
 ---
 
-<div class="bg-[#fbeaab] p-5 max-w-md mx-auto rounded-lg shadow-md">
-  <h1 class="mb-3 text-2xl">{frontmatter.name}</h1>
-  <p class="mb-5">{frontmatter.description}</p>
-  <h3 class="text-lg mb-3">Ingredients</h3>
-  <ul class="list-decimal pl-6 mb-5">
-  {frontmatter.ingredients.map(ingredient => 
-    <li class="mb-1">{ingredient}</li>)}
-  </ul>
-  <h3  class="text-lg mb-3">Instructions</h3>
-  <ol class="list-decimal pl-6">
-  {frontmatter.instructions.map(instruction => 
-    <li class="mb-1">{instruction}</li>)
-  </ol>
-</div>
+<Main title={frontmatter.name}>
+  <div class="bg-med-champagne font-montserrat p-5 max-w-md mx-auto rounded-lg shadow-md">
+    <h1 class="font-tenorsans mb-3 text-2xl">{frontmatter.name}</h1>
+    <p class="mb-5">{frontmatter.description}</p>
+    <h3 class="text-lg mb-3">Ingredients</h3>
+    <ul class="list-decimal pl-6 mb-5">
+      {frontmatter.ingredients.map(ingredient => 
+        <li class="mb-1">{ingredient}</li>)}
+    </ul>
+    <h3 class="text-lg mb-3">Instructions</h3>
+    <ol class="list-decimal pl-6">
+    {frontmatter.instructions.map(instruction => 
+      <li class="mb-1">{instruction}</li>)
+    </ol>
+  </div>
+</Main>

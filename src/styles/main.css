@@ -1,0 +1,5 @@
+/* Since we're using TailwindCSS and Astro, we don't really need to do
+  much with any type of main style sheet. 
+*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Tenor+Sans');
