@@ -1,20 +1,23 @@
 ---
 import Main from '../layouts/Main.astro';
-import Search from '../components/Search.astro';
 
 import { Picture } from '@astrojs/image/components';
 import logo from '../images/todds-bistro-logo.png';
+
+import { getCollection } from 'astro:content';
+
+const recipes = await getCollection("recipes");
 ---
 
 <Main title="Todd's Bistro">
 <div class="flex flex-row">
   <div class="lg:basis-2/12">
   </div>
-  <div class="basis-12/12 lg:basis-8/12">
-    <div class="flex flex-col">
-      <Picture src={logo} widths={[1000]} aspectRatio="5:3" />
-      <Search />
-    </div>
+  <div class="basis-12/12 lg:basis-8/12 lg:border-2 lg:outline
+    lg:p-8 border-outer-space outline-4 outline-outer-space 
+    outline-offset-inset flex flex-column">
+      <Picture src={logo} widths={[1000]} aspectRatio="5:3" 
+        alt="Site Logo" />
   </div>
   <div class="lg:basis-2/12">
   </div>

@@ -20,6 +20,9 @@ module.exports = {
         'montserrat': ['Montserrat','sans-serif'],
         'tenorsans': ['Tenor Sans','sans-serif'],
       },
+      outlineOffset: {
+        inset: '-20px',
+      }
     },
   },
   plugins: [],
