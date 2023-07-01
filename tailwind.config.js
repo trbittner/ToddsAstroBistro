@@ -15,6 +15,7 @@ module.exports = {
         'outer-space': '#454545',
         'ghost-white': '#f8f9fa',
         'bright-gray': '#e9ecef',
+        'gold': '#ffd700'
       },
       fontFamily: {
         'montserrat': ['Montserrat','sans-serif'],

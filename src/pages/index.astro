@@ -1,5 +1,6 @@
 ---
 import Main from '../layouts/Main.astro';
+import Category from '../layouts/Category.astro';
 
 import { Picture } from '@astrojs/image/components';
 import logo from '../images/todds-bistro-logo.png';
@@ -7,19 +8,49 @@ import logo from '../images/todds-bistro-logo.png';
 import { getCollection } from 'astro:content';
 
 const recipes = await getCollection("recipes");
+
+const collectionData = recipes.map(recipe => 
+  ({'slug':recipe.slug,'name':recipe.data.name,
+    'tags':recipe.data.tags}));
+
+const categories = recipes
+//Flatten tags into a single array
+.flatMap(recipe => recipe.data.tags) 
+.reduce((acc,cur) => {
+  if (!acc.hasOwnProperty(cur)) {
+    acc[cur] = [];
+  }
+  return acc;
+},{})
+
+recipes.forEach(recipe => {
+  recipe.data.tags.forEach(tag => {
+    categories[tag].push({'slug':recipe.slug,
+      'name':recipe.data.name})
+  })
+})
+
+const categoryNames = Object.keys(categories).sort()
+
+console.log(categories)
+console.log(categoryNames)
 ---
 
 <Main title="Todd's Bistro">
-<div class="flex flex-row">
-  <div class="lg:basis-2/12">
+  <div class="flex flex-row">
+    <div class="lg:basis-2/12">
+    </div>
+    <div class="basis-12/12 lg:basis-8/12 lg:border-2 lg:outline
+      lg:p-8 border-outer-space outline-4 outline-outer-space 
+      outline-offset-inset flex flex-col">
+        <Picture src={logo} widths={[1000]} aspectRatio="5:3" 
+          alt="Site Logo" />
+        
+        <div class="flex flex-row">
+          <Category categoryName="Vegetarian" recipes={categories["Vegetarian"]} />
+        </div>
+    </div>
+    <div class="lg:basis-2/12">
+    </div>
   </div>
-  <div class="basis-12/12 lg:basis-8/12 lg:border-2 lg:outline
-    lg:p-8 border-outer-space outline-4 outline-outer-space 
-    outline-offset-inset flex flex-column">
-      <Picture src={logo} widths={[1000]} aspectRatio="5:3" 
-        alt="Site Logo" />
-  </div>
-  <div class="lg:basis-2/12">
-  </div>
-</div>
 </Main>
