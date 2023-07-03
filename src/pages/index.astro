@@ -40,8 +40,15 @@ const categoryNames = Object.keys(categories).sort()
     <div class="basis-12/12 lg:basis-8/12 lg:border-2 lg:outline
       lg:p-8 border-outer-space outline-4 outline-outer-space 
       outline-offset-inset flex flex-col">
+
         <Picture src={logo} widths={[1000]} aspectRatio="5:3" 
           alt="Site Logo" />
+
+        <div class="border-y-2 border-outer-space mt-3 
+          bg-med-champagne text-outer-space">
+          <h1 class='font-tenorsans text-2xl py-2 
+            text-center font-bold'>Categories</h1>
+        </div>
         
         <div class="flex flex-wrap mt-3">
         {categoryNames.map(name =>
@@ -51,6 +58,7 @@ const categoryNames = Object.keys(categories).sort()
           </div>
         )}
         </div>
+
     </div>
     <div class="lg:basis-2/12">
     </div>
