@@ -1,11 +1,13 @@
 ---
 const {categoryName,recipes} = Astro.props;
+const sortedRecipes = recipes.sort((a,b) => a.slug - b.slug);
 ---
 <div class="bg-med-champagne font-montserrat p-5 rounded-lg 
-  shadow-md">
+  border border-outer-space outline outline-offset-category 
+  h-full">
   <h1 class="font-tenorsans mb-3 text-2xl">{categoryName}</h1>
     <ul>
-    {recipes.map(recipe => 
+    {sortedRecipes.map(recipe => 
       <li class="ml-4 mb-2">
         <a class="text-outer-space transition-colors duration-500
           hover:text-gold" href={"recipes/"+recipe.slug}>

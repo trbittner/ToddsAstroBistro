@@ -23,6 +23,7 @@ module.exports = {
       },
       outlineOffset: {
         inset: '-20px',
+        category: '-8px',
       }
     },
   },
