@@ -28,5 +28,4 @@ instructions:
 tags: 
     - Indian 
     - Vegetarian
-day: saturday
 ---

@@ -1,5 +1,7 @@
 ---
 import Main from '../../layouts/Main.astro';
+import logo from '../../images/todds-bistro-small-logo.png'
+import { Image } from '@astrojs/image/components';
 
 import { getCollection } from 'astro:content';
 
@@ -15,7 +17,15 @@ const { recipe } = Astro.props;
 
 <Main title={"Todd's Bistro - " + recipe.data.name}>
   <div id={recipe.slug} class="bg-med-champagne 
-    font-montserrat p-5 max-w-md mx-auto rounded-lg shadow-md">
+    font-montserrat p-5 rounded-lg shadow-md">
+    <div class="text-right">
+      <a class="text-outer-space transition-colors duration-500 hover:text-gold" href="/">
+        <i class="bi bi-house-door-fill text-xl 
+          lg:text-2xl"></i>
+      </a>
+    </div>
+    <Image src={logo} class="w-32 mb-5 lg:w-1/3 lg:m-auto" 
+    alt="Site Logo" />
     <h1 class="font-tenorsans mb-3 text-2xl">{recipe.data.name}</h1>
     <p class="mb-5">{recipe.data.description}</p>
     <h3 class="text-lg mb-3">Ingredients</h3>

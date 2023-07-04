@@ -25,5 +25,4 @@ instructions:
 tags: 
     - Pizza 
     - Vegetarian
-day: monday
 ---

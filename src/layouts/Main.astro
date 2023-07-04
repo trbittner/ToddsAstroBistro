@@ -11,6 +11,18 @@ import '../styles/main.css';
     <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <div class="flex flex-row">
+      <div class="lg:basis-2/12">
+      </div>
+
+      <div class="basis-12/12 lg:basis-8/12 lg:border-2 lg:outline
+      lg:p-8 border-outer-space outline-4 outline-outer-space 
+      outline-offset-inset flex flex-col">
+        <slot />
+      </div>
+
+      <div class="lg:basis-2/12">
+      </div>
+    </div>
   </body>
 </html>
