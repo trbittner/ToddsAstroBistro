@@ -6,5 +6,6 @@ import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), image(), svelte()]
+  integrations: [tailwind(), image(), svelte()],
+  site: 'https://trbittner.github.io',
 });
