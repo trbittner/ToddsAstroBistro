@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Recipe.astro
 name: Palak Paneer
 description: As with most of my recipes, this tends to be iconoclastic, but is still satisfying.  
     The heat is dialed in on the mild side. Make adjustments as you see fit.

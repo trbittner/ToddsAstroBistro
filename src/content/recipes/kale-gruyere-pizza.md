@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Recipe.astro
 name: Kale and Gruyere Pizza
 description: This is simple pizza with more complexity in flavor than the ingredient profile shows.
 servings: Serves 2-3
