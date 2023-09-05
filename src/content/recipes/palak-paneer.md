@@ -5,7 +5,7 @@ description: As with most of my recipes, this tends to be iconoclastic, but is s
 servings: Serves 2 with rice, naan, or cauliflower rice
 ingredients:
     - 8-10 oz frozen spinach
-    - 28 oz. can diced tomatoes
+    - 28 oz. diced tomatoes (canned)
     - 2-3 tbsp unsalted butter
     - 4-5 oz queso fresco, diced
     - 1/4 cup onion, diced
